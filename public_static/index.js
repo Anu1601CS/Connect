@@ -8,7 +8,6 @@ var password='';
         $('#login1').click(function(){
             email=$('#text1').val();
             password=$('#password1').val();
-            // console.log(username+' '+password);
             $.post({url:'/verifyuser',data:{email:email,password:password},success:function(data){
                 console.log(data);
                 if(data==='ok') {
